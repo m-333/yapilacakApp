@@ -89,26 +89,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yapılacakları Güncelle" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypd-gI-qTd">
-                                <rect key="frame" x="33" y="187" width="350" height="45.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yapılacakları Güncelle" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypd-gI-qTd">
+                                <rect key="frame" x="30" y="138" width="354" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J7-mj-L5I">
-                                <rect key="frame" x="33" y="283" width="350" height="49"/>
+                                <rect key="frame" x="33" y="233.5" width="350" height="49"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="GÜNCELLE">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGuncelle:" destination="eoA-b4-bgN" eventType="touchUpInside" id="8er-7Q-u5F"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gF9-Qx-dXr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ypd-gI-qTd" firstAttribute="top" secondItem="gF9-Qx-dXr" secondAttribute="top" constant="50" id="RT2-Pb-7Xg"/>
                             <constraint firstItem="4J7-mj-L5I" firstAttribute="top" secondItem="ypd-gI-qTd" secondAttribute="bottom" constant="50" id="fwI-PI-Khc"/>
+                            <constraint firstItem="gF9-Qx-dXr" firstAttribute="trailing" secondItem="ypd-gI-qTd" secondAttribute="trailing" constant="30" id="tmN-Rl-gb2"/>
+                            <constraint firstItem="ypd-gI-qTd" firstAttribute="leading" secondItem="gF9-Qx-dXr" secondAttribute="leading" constant="30" id="wER-c9-lHE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Er-Ka-sc0"/>
+                    <connections>
+                        <outlet property="guncelleText" destination="ypd-gI-qTd" id="SOH-8x-Pxo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E49-sf-8IC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

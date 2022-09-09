@@ -6,3 +6,10 @@
 //
 
 import Foundation
+class IsDetayRouter : PresenterToRouterIsDetayProtocol{
+    static func createModule(ref: IsDetayVC) {
+        ref.isDetayPresenterNesnesi = IsDetayPresenter()
+        
+        ref.isDetayPresenterNesnesi?.isDetayInteractor = IsDetayInteractor()
+    }
+}
