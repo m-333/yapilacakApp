@@ -6,16 +6,18 @@
 //
 
 import Foundation
-protocol ViewToPresenterIsDetayProtocol {
-    var isDetayInteractor: PresenterToInteractorIsDetayProtocol? { get set }
+//ana protocol
+protocol ViewToPresenterIsKayitProtocol {
+   var isKayitInteractor:PresenterToInteractorIsKayitPortocol? { get set}
     
-    func guncelle(yapilacak_id: Int, yapilacak_is:String)
+    func ekle (yapilacak_is: String)
 }
-protocol PresenterToInteractorIsDetayProtocol {
-    func yapilacakGuncelle(yapilacak_id: Int, yapilacak_is:String)
+protocol PresenterToInteractorIsKayitPortocol {
+    func yapilacakEkle (yapilacak_is: String)
     
 }
 //router
-protocol PresenterToRouterIsDetayProtocol {
-    static func createModule(ref: IsDetayVC)
+protocol PresenterToRouterIsKayitProtocol {
+    static func createModule(ref:IsKayitVC)
+    
 }

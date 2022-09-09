@@ -38,7 +38,7 @@ func yapilacakAra(aramaKelimesi: String) {
     db?.open()
     
     do{
-    let q = try db!.executeQuery("SELECT * FROM kisiler WHERE kisi_ad like '%\(aramaKelimesi)%'", values: nil)
+    let q = try db!.executeQuery("SELECT * FROM yapilacaklar WHERE yapilacak_is like '%\(aramaKelimesi)%'", values: nil)
         
         while q.next(){
             let yapilacak = Yapilacaklar(yapilacak_id: Int(q.string(forColumn: "yapilacak_id"))!,
@@ -56,7 +56,7 @@ func yapilacakAra(aramaKelimesi: String) {
 func yapilacakSil(yapilacak_id: Int) {
     db?.open()
     do{
-        try db!.executeUpdate("DELETE FROM kisiler WHERE kisi_id = ? ", values: [yapilacak_id])
+        try db!.executeUpdate("DELETE FROM yapilacaklar WHERE yapilacak_id = ? ", values: [yapilacak_id])
         tumYapilacaklariAl()
     } catch{
         print(error.localizedDescription)

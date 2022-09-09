@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class IsDetayInteractor : PresenterToInteractorIsDetayProtocol {
+class IsKayitInteractor : PresenterToInteractorIsKayitPortocol {
     let db:FMDatabase?
     
     init (){
@@ -15,12 +15,13 @@ class IsDetayInteractor : PresenterToInteractorIsDetayProtocol {
         db = FMDatabase(path: veritabaniURL.path)
     }
     
-    func yapilacakGuncelle(yapilacak_id: Int, yapilacak_is: String) {
+    func yapilacakEkle(yapilacak_is: String) {
         db?.open()
         do{
-            try db!.executeUpdate("UPDATE kisiler SET yapilacak_is = ? WHERE yapilacak_id = ? ", values: [yapilacak_is,yapilacak_id])
+            try db!.executeUpdate("INSERT INTO yapilacaklar (yapilacak_is) VALUES (?)", values: [yapilacak_is])
         } catch{
             print(error.localizedDescription)
+            print("hata var")
         }
         db?.close()
     }

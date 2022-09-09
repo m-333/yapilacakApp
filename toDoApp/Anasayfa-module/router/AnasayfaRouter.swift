@@ -11,7 +11,7 @@ class AnasayfaRouter : PresenterToRounterAnasayfaProtocol{
         let presenter = AnasayfaPresenter()
         ref.anasayfaPresenterNesnesi = presenter
         //presenter
-        //ref.anasayfaPresenterNesnesi?.anasayfaInteractor = AnasayfaInteractor()
+        ref.anasayfaPresenterNesnesi?.anasayfaInteractor = AnasayfaInteractor()
         ref.anasayfaPresenterNesnesi?.anasayfaView = ref
         //ınteractor
         

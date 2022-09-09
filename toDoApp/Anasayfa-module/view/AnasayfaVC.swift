@@ -63,7 +63,7 @@ extension AnasayfaVC : PresenterToViewAnasayfaProtocol{
 }
 extension AnasayfaVC : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-       // anasayfaPresenterNesnesi?.ara(araamKelimesi: searchText)
+      anasayfaPresenterNesnesi?.ara(aramaKelimesi: searchText)
     }
 }
 extension AnasayfaVC : UITableViewDelegate, UITableViewDataSource{

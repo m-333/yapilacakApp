@@ -6,12 +6,10 @@
 //
 
 import Foundation
-class IsDetayPresenter : ViewToPresenterIsDetayProtocol{
+class IsKayitPresenter : ViewToPresenterIsKayitProtocol{
+    var isKayitInteractor: PresenterToInteractorIsKayitPortocol?
     
-    var isDetayInteractor: PresenterToInteractorIsDetayProtocol?
-    
-    func guncelle(yapilacak_id: Int, yapilacak_is: String) {
-        
-        isDetayInteractor?.yapilacakGuncelle(yapilacak_id: yapilacak_id, yapilacak_is: yapilacak_is)
+    func ekle(yapilacak_is: String) {
+        isKayitInteractor?.yapilacakEkle(yapilacak_is: yapilacak_is)
     }
 }

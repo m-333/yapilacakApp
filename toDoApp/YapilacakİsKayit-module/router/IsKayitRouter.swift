@@ -6,9 +6,10 @@
 //
 
 import Foundation
-class IsDetayRouter : PresenterToRouterIsDetayProtocol{
-    static func createModule(ref: IsDetayVC) {
-        
-        
+class IsKayitRouter: PresenterToRouterIsKayitProtocol {
+    static func createModule(ref: IsKayitVC) {
+        ref.isKayitPresenterNesnesi = IsKayitPresenter()
+        ref.isKayitPresenterNesnesi?.isKayitInteractor = IsKayitInteractor()
     }
 }
+

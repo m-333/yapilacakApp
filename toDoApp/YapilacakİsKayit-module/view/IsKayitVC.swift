@@ -10,28 +10,19 @@ import UIKit
 class IsKayitVC: UIViewController {
 
     @IBOutlet weak var yapilacakText: UITextField!
+    var isKayitPresenterNesnesi: ViewToPresenterIsKayitProtocol?
     
-    var yapilacak:Yapilacaklar?
-    
-    var isDetayPresenterNesnesi: ViewToPresenterIsDetayProtocol?
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //IsDetayRouter.createModule(ref: self)
-       
-        
-        if let y = yapilacak {
-            yapilacakText.text = y.yapilacak_is
-        }
+        IsKayitRouter.createModule(ref: self)
 
-    
     }
     
    
     @IBAction func btnKayit(_ sender: Any) {
-        if let yi = yapilacakText.text ,let y = yapilacak {
-            isDetayPresenterNesnesi?.guncelle(yapilacak_id: y.yapilacak_id!, yapilacak_is: yi)
+        if let ik = yapilacakText.text{
+            isKayitPresenterNesnesi?.ekle(yapilacak_is: ik)
         }
     }
     
