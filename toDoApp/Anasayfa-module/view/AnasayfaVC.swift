@@ -91,7 +91,7 @@ extension AnasayfaVC : UITableViewDelegate, UITableViewDataSource{
             let yapilacak = self.yapilacaklarListe[indexPath.row]
 
             
-            let alert = UIAlertController(title: "silme işlemi", message: "\(yapilacak.yapilacak_is!) silinsin mi ?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "silme işlemi", message: "\(yapilacak.yapilacak_is!) Görevi tamamlandı mı ?", preferredStyle: .alert)
             let iptalAction = UIAlertAction(title: "iptal ", style: .cancel){action in }
             let evetAction = UIAlertAction(title: "evet", style: .destructive){
                 action in

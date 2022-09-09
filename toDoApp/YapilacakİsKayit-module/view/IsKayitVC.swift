@@ -23,6 +23,7 @@ class IsKayitVC: UIViewController {
     @IBAction func btnKayit(_ sender: Any) {
         if let ik = yapilacakText.text{
             isKayitPresenterNesnesi?.ekle(yapilacak_is: ik)
+            yapilacakText.text=""
         }
     }
     

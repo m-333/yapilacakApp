@@ -3,12 +3,13 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Anasayfa-->
+        <!--Yapılacaklar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AnasayfaVC" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,6 +24,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="idR-La-nln">
                                 <rect key="frame" x="0.0" y="139" width="414" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" systemColor="systemPurpleColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yapilacaklarHucre" rowHeight="100" id="qKf-Vs-YAg" customClass="TableViewHucre" customModule="toDoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
@@ -51,7 +53,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Color1"/>
                         <constraints>
                             <constraint firstItem="BLM-E5-sRv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Bb7-VJ-TS1"/>
                             <constraint firstItem="BLM-E5-sRv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OJB-Un-TST"/>
@@ -62,8 +64,9 @@
                             <constraint firstItem="idR-La-nln" firstAttribute="top" secondItem="BLM-E5-sRv" secondAttribute="bottom" id="vfh-Hp-Veq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Anasayfa" id="bg3-aB-ItS">
+                    <navigationItem key="navigationItem" title="Yapılacaklar" id="bg3-aB-ItS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AtD-cC-hbd">
+                            <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
                             <connections>
                                 <action selector="buttonGuncelle:" destination="nOr-Dh-uWV" id="Zz1-df-Mtx"/>
                                 <segue destination="JDo-fp-3km" kind="show" id="X9q-Q2-Atl"/>
@@ -89,16 +92,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yapılacakları Güncelle" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypd-gI-qTd">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Görevi Güncelle" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypd-gI-qTd">
                                 <rect key="frame" x="30" y="138" width="354" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J7-mj-L5I">
-                                <rect key="frame" x="33" y="233.5" width="350" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J7-mj-L5I">
+                                <rect key="frame" x="30" y="233.5" width="354" height="49"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="GÜNCELLE">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btnGuncelle:" destination="eoA-b4-bgN" eventType="touchUpInside" id="8er-7Q-u5F"/>
@@ -109,7 +113,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ypd-gI-qTd" firstAttribute="top" secondItem="gF9-Qx-dXr" secondAttribute="top" constant="50" id="RT2-Pb-7Xg"/>
+                            <constraint firstItem="4J7-mj-L5I" firstAttribute="leading" secondItem="gF9-Qx-dXr" secondAttribute="leading" constant="30" id="b4m-ZN-4UE"/>
                             <constraint firstItem="4J7-mj-L5I" firstAttribute="top" secondItem="ypd-gI-qTd" secondAttribute="bottom" constant="50" id="fwI-PI-Khc"/>
+                            <constraint firstItem="gF9-Qx-dXr" firstAttribute="trailing" secondItem="4J7-mj-L5I" secondAttribute="trailing" constant="30" id="iRg-c8-RSt"/>
                             <constraint firstItem="gF9-Qx-dXr" firstAttribute="trailing" secondItem="ypd-gI-qTd" secondAttribute="trailing" constant="30" id="tmN-Rl-gb2"/>
                             <constraint firstItem="ypd-gI-qTd" firstAttribute="leading" secondItem="gF9-Qx-dXr" secondAttribute="leading" constant="30" id="wER-c9-lHE"/>
                         </constraints>
@@ -131,18 +137,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yapılacak Ekle" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GT9-b9-HOF">
-                                <rect key="frame" x="32" y="243" width="350" height="45.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Görev  Ekle" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GT9-b9-HOF">
+                                <rect key="frame" x="30" y="138" width="354" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek3-LF-tJg">
-                                <rect key="frame" x="136" y="342" width="142" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ek3-LF-tJg">
+                                <rect key="frame" x="30" y="233.5" width="354" height="49"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="KAYDET">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btnKayit:" destination="JDo-fp-3km" eventType="touchUpInside" id="jI5-ad-MQO"/>
@@ -151,6 +156,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E37-dT-fp0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ek3-LF-tJg" firstAttribute="leading" secondItem="E37-dT-fp0" secondAttribute="leading" constant="30" id="8PY-Cx-of7"/>
+                            <constraint firstItem="E37-dT-fp0" firstAttribute="trailing" secondItem="GT9-b9-HOF" secondAttribute="trailing" constant="30" id="B33-Dx-jdi"/>
+                            <constraint firstItem="GT9-b9-HOF" firstAttribute="leading" secondItem="E37-dT-fp0" secondAttribute="leading" constant="30" id="Eya-va-AxJ"/>
+                            <constraint firstItem="ek3-LF-tJg" firstAttribute="top" secondItem="GT9-b9-HOF" secondAttribute="bottom" constant="50" id="gu1-u9-M4A"/>
+                            <constraint firstItem="E37-dT-fp0" firstAttribute="trailing" secondItem="ek3-LF-tJg" secondAttribute="trailing" constant="30" id="tw9-eu-4pX"/>
+                            <constraint firstItem="GT9-b9-HOF" firstAttribute="top" secondItem="E37-dT-fp0" secondAttribute="top" constant="50" id="xfj-96-hYL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lxK-Cc-pd8"/>
                     <connections>
@@ -169,6 +182,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0iX-H2-cMb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -181,7 +197,16 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="Color1">
+            <color red="0.47682409467461528" green="0.61219522568454821" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
