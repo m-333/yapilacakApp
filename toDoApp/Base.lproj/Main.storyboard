@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Yapılacaklar-->
+        <!--Görev Liste-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AnasayfaVC" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,13 +39,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tarih" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPg-Ej-9m4">
+                                                    <rect key="frame" x="349.5" y="39.5" width="34.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zxh-cW-g6h" firstAttribute="centerY" secondItem="oks-T0-ek4" secondAttribute="centerY" id="KmA-qz-8XR"/>
                                                 <constraint firstItem="zxh-cW-g6h" firstAttribute="centerX" secondItem="oks-T0-ek4" secondAttribute="centerX" id="XJn-hU-T6i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rPg-Ej-9m4" secondAttribute="trailing" constant="10" id="jQ3-CI-Y97"/>
+                                                <constraint firstItem="rPg-Ej-9m4" firstAttribute="centerY" secondItem="oks-T0-ek4" secondAttribute="centerY" id="k9L-Dp-VCU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="tarihLabel" destination="rPg-Ej-9m4" id="uBb-qf-7K7"/>
                                             <outlet property="yapilacakLabel" destination="zxh-cW-g6h" id="aQb-ZC-O9S"/>
                                         </connections>
                                     </tableViewCell>
@@ -64,7 +73,7 @@
                             <constraint firstItem="idR-La-nln" firstAttribute="top" secondItem="BLM-E5-sRv" secondAttribute="bottom" id="vfh-Hp-Veq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Yapılacaklar" id="bg3-aB-ItS">
+                    <navigationItem key="navigationItem" title="Görev Liste" id="bg3-aB-ItS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AtD-cC-hbd">
                             <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
                             <connections>
@@ -82,7 +91,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="nOr-Dh-uWV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="656.52173913043487" y="101.78571428571428"/>
+            <point key="canvasLocation" x="658" y="102"/>
         </scene>
         <!--Is DetayVC-->
         <scene sceneID="IW6-nf-GA0">
@@ -198,7 +207,7 @@
     </scenes>
     <resources>
         <namedColor name="Color1">
-            <color red="0.47682409467461528" green="0.61219522568454821" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.47699999809265137" green="0.6119999885559082" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

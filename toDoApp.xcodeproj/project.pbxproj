@@ -75,6 +75,7 @@
 		FD966CD928CA1C2800DA78C8 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		FD966CE128CA1DB400DA78C8 /* yapilacaklar.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = yapilacaklar.sqlite; sourceTree = "<group>"; };
 		FD966CE328CA325000DA78C8 /* TableViewHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHucre.swift; sourceTree = "<group>"; };
+		FD9AF6AB28CC8ABE0015CC4B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 			children = (
 				FD9605C528C9F68B00960ADF /* toDoApp */,
 				FD9605C428C9F68B00960ADF /* Products */,
+				FD9AF6AA28CC8ABE0015CC4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,6 +309,14 @@
 				FD966CCA28CA046800DA78C8 /* Yapilacaklar.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		FD9AF6AA28CC8ABE0015CC4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD9AF6AB28CC8ABE0015CC4B /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

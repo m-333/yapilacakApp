@@ -11,6 +11,7 @@ class TableViewHucre: UITableViewCell {
 
     @IBOutlet weak var yapilacakLabel: UILabel!
     
+    @IBOutlet weak var tarihLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
